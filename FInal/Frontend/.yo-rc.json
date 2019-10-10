@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ar.edu.um.programacion2",
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "6.3.1",
+    "applicationType": "gateway",
+    "baseName": "Frontend",
+    "packageName": "ar.edu.um.programacion2",
+    "packageFolder": "ar/edu/um/programacion2",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NGY1OTE2NmQ0MmRkMWFkY2E2NzRhNDhlZGQ4NDVmNTJhZmUwNjI5M2Q4YmVkOTM0NTdlMDViYTY5MDI2MmI3ZmYzOTU4MzRiNDMwZTUwMTE2OTNjOWEwNmI0YjFhZTkyOGU1ODBiYzZkYWI1Y2FjMWM2MmRkNGQ3YTFhYWM4Nzc=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "slate",
+    "clientThemeVariant": "dark",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": ["es", "en"],
+    "blueprints": []
+  }
+}
