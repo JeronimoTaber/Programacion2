@@ -1,0 +1,46 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "ar.edu.um.programacion2.card",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.3.1",
+    "applicationType": "microservice",
+    "baseName": "CreditCard",
+    "packageName": "ar.edu.um.programacion2.card",
+    "packageFolder": "ar/edu/um/programacion2/card",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZmY1ZWE5ZTVhMGQxOTllOTQwNGFjMTE1ZTJkMmI1MDJjMDg0Yjg2OGU4NmU1N2NhMjhjNmNlMzYyMDE4NTkyYjYwMTAyY2NlYTE5YzY4ZDgwYTBmMjAwYWExM2IzMTJmMjI4MWI2ODNkNjlmMGViMzM2YzQ2ZGRlY2YzOWFmM2Y=",
+    "embeddableLaunchScript": false,
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "blueprints": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
