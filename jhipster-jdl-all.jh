@@ -1,0 +1,53 @@
+
+enum CategoryStatus {
+    AVAILABLE, DISABLED
+}
+
+entity Client {
+	name String,
+    lastname String,
+    email String,
+    phone Integer,
+    dateAdded LocalDate,
+    dateModified LocalDate,
+    status CategoryStatus
+}
+
+entity Vendor {
+    title String,
+    description String,
+    dateAdded LocalDate,
+    dateModified LocalDate,
+    status CategoryStatus
+}
+entity CreditCard {
+    number String,
+    lastFour Integer,
+    type String,
+    pin Integer,
+    dateAdded LocalDate,
+    dateModified LocalDate,
+    status CategoryStatus
+}
+entity Sale {
+    product String,
+    price Integer,
+    dateAdded LocalDate
+}
+relationship OneToMany {
+	Client{CreditCard} to CreditCard,
+    Vendor{Client} to Client,
+    Vendor{Sale} to Sale,
+    Client{Sale} to Sale,
+    CreditCard{Sale} to Sale
+    
+}
+dto * with mapstruct
+service all with serviceImpl
+
+microservice CreditCard with CreditCard
+
+
+
+
+

@@ -1,0 +1,25 @@
+
+enum CategoryStatus {
+    AVAILABLE, DISABLED
+}
+
+entity CreditCard {
+    number String,
+    lastFour Integer,
+    type String,
+    pin Integer,
+    dateAdded LocalDate,
+    dateModified LocalDate,
+    status CategoryStatus
+}
+
+
+dto * with mapstruct
+service all with serviceImpl
+
+microservice CreditCard with CreditCard
+
+
+
+
+
