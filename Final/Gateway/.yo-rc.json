@@ -1,14 +1,14 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "ar.edu.um.programacion2",
-      "nativeLanguage": "es"
+      "packageName": "ar.edu.um.programacion2.gateway",
+      "nativeLanguage": "en"
     },
     "jhipsterVersion": "6.3.1",
     "applicationType": "gateway",
     "baseName": "Gateway",
-    "packageName": "ar.edu.um.programacion2",
-    "packageFolder": "ar/edu/um/programacion2",
+    "packageName": "ar.edu.um.programacion2.gateway",
+    "packageFolder": "ar/edu/um/programacion2/gateway",
     "serverPort": "8080",
     "authenticationType": "jwt",
     "cacheProvider": "hazelcast",
@@ -17,26 +17,26 @@
     "databaseType": "sql",
     "devDatabaseType": "mysql",
     "prodDatabaseType": "mysql",
-    "searchEngine": "elasticsearch",
+    "searchEngine": false,
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "NmRiMTM3ZmNmMmMyMDhkYjE2MmZmMWQxNDU4NDljNGFjMGI1NjgzYjA3ZWFmNDgzNTc3ZjM1NWNlN2EwNTU4ODNjZTg2Mjg4MzAwZDQwNjRhNmJmZDE0ZDJmMGFiMWE2NDFiZmUzYjNkYzc0YjhjMDNjNjA2NmNjZTVlNzYzMjI=",
+    "jwtSecretKey": "OGUwNTE1NTgzMjUzYTA4ZmJhZWQ2NTU4YmVjMDg3YzAwZDZmOTZlOWZhYjE3MmM3ZmM3MzAwYzdmOGJjYWZiYjYwYmZlZWI3NTdmMWY0MTJiZDU4NGZmYjY4NjgyODEyZmE1MjhmYTc4Mzc0NDI2MmIyNGYwZDA1NGM2YTc1NTA=",
     "embeddableLaunchScript": false,
     "useSass": true,
     "clientPackageManager": "npm",
     "clientFramework": "angularX",
     "clientTheme": "slate",
     "clientThemeVariant": "dark",
-    "testFrameworks": ["gatling", "cucumber", "protractor"],
+    "testFrameworks": [],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
     "enableTranslation": true,
-    "nativeLanguage": "es",
-    "languages": ["es", "en"],
+    "nativeLanguage": "en",
+    "languages": ["en", "es"],
     "blueprints": []
   }
 }

@@ -57,7 +57,7 @@ describe('Component Tests', () => {
           email: '',
           password: 'password',
           login: '',
-          langKey: 'es'
+          langKey: 'en'
         });
         expect(comp.success).toEqual(true);
         expect(mockTranslate.getCurrentSpy).toHaveBeenCalled();

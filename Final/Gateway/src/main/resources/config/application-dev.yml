@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
-    ar.edu.um.programacion2: DEBUG
+    ar.edu.um.programacion2.gateway: DEBUG
 
 eureka:
   instance:
@@ -25,11 +25,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
-
-management:
-  health:
-    elasticsearch:
-      enabled: false
 
 spring:
   profiles:
@@ -48,9 +43,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/Gateway?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/FinalProgramacion2?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password:
+    password: root
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -73,11 +68,6 @@ spring:
       hibernate.cache.hazelcast.instance_name: Gateway
       hibernate.cache.use_minimal_puts: true
       hibernate.cache.hazelcast.use_lite_member: true
-  data:
-    elasticsearch:
-      properties:
-        path:
-          home: target/elasticsearch
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
@@ -137,7 +127,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: NmRiMTM3ZmNmMmMyMDhkYjE2MmZmMWQxNDU4NDljNGFjMGI1NjgzYjA3ZWFmNDgzNTc3ZjM1NWNlN2EwNTU4ODNjZTg2Mjg4MzAwZDQwNjRhNmJmZDE0ZDJmMGFiMWE2NDFiZmUzYjNkYzc0YjhjMDNjNjA2NmNjZTVlNzYzMjI=
+        base64-secret: OGUwNTE1NTgzMjUzYTA4ZmJhZWQ2NTU4YmVjMDg3YzAwZDZmOTZlOWZhYjE3MmM3ZmM3MzAwYzdmOGJjYWZiYjYwYmZlZWI3NTdmMWY0MTJiZDU4NGZmYjY4NjgyODEyZmE1MjhmYTc4Mzc0NDI2MmIyNGYwZDA1NGM2YTc1NTA=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
