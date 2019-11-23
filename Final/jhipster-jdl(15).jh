@@ -1,0 +1,98 @@
+	
+    application {
+      config {
+        baseName gate,
+        applicationType gateway,
+        packageName ar.edu.um.programacion2.gate,
+        serviceDiscoveryType eureka,
+        authenticationType jwt,
+        prodDatabaseType mysql,
+        cacheProvider hazelcast,
+        buildTool maven,
+        clientFramework angularX      }
+      entities *
+    }
+
+    application {
+      config {
+        baseName microcard,
+        applicationType microservice,
+        packageName ar.edu.um.programacion2.microcard,
+        serviceDiscoveryType eureka,
+        authenticationType jwt,
+        prodDatabaseType mysql,
+        buildTool maven,
+        serverPort 8081
+      }
+      entities MicroCard
+    }
+
+    application {
+      config {
+        baseName loger,
+        applicationType microservice,
+        packageName ar.edu.um.programacion2.loger,
+        serviceDiscoveryType eureka,
+        authenticationType jwt,
+        prodDatabaseType mysql,
+        buildTool maven,
+        serverPort 8082
+      }
+      entities Loger
+    }
+
+    
+    entity Loger{
+    	idSale Long required
+        step String required
+		resultq ResultQ
+		explanation String
+    }
+    enum ResultQ{
+    	OK, FAIL, INFO
+    }
+    entity MicroCard{
+        type String required
+		number String required
+        security Integer required
+        expirationDate LocalDate required
+        maxAmount BigDecimal required
+        token String
+		status Status 
+    }
+  	entity Sale {
+        name String required
+        description String
+        price BigDecimal required min(0)
+        date Instant required
+
+    }
+    entity Client {
+        firstName String required
+		lastName String required
+    }
+    entity CreditCard {
+        token String
+    }
+    
+	enum Status {
+    	AVAILABLE, UNAVAILABLE
+    }
+    
+
+
+    relationship OneToMany {
+       	Client{creditCard} to CreditCard{client},
+       	CreditCard{sale} to Sale{creditCard(token)},
+       	Client{sale} to Sale{client}
+    }
+    relationship ManyToOne{
+    	Client{user(login)} to User{client},
+        Sale{user(login)} to User{sale}
+    }
+
+    paginate  Client, CreditCard, Sale with pagination
+
+    microservice MicroCard with microcard
+    microservice Loger with loger
+    
